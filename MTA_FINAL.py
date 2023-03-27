@@ -25,7 +25,7 @@ ynturbo()
 
 def soundplay (sound_type):
     if sound_type == "ping":
-        None
+        playsound('F:\MTA-Memory-Test-And-Analysis-main')
     elif sound_type == "correct":
         None
     elif sound_type == "wrong":
@@ -35,7 +35,7 @@ def soundplay (sound_type):
 
 
 if turbo == False:
-
+    soundplay("ping")
     print("-------Debug-------")
     print("---Turbo:Enabled---")
 else:
