@@ -23,6 +23,17 @@ def ynturbo():
 
 ynturbo()
 
+def soundplay (sound_type):
+    if sound_type == "ping":
+        None
+    elif sound_type == "correct":
+        None
+    elif sound_type == "wrong":
+        None
+    else:
+        None
+
+
 if turbo == False:
 
     print("-------Debug-------")
