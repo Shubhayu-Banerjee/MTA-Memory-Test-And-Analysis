@@ -25,13 +25,13 @@ ynturbo()
 
 def soundplay (sound_type):
     if sound_type == "ping":
-        playsound('F:\MTA-Memory-Test-And-Analysis-main')
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
     elif sound_type == "correct":
-        None
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
     elif sound_type == "wrong":
-        None
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
     else:
-        None
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
 
 
 if turbo == False:
