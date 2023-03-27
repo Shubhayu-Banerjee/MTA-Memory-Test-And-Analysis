@@ -21,9 +21,11 @@ def ynturbo():
     else:
         turbo = True
 
+
 ynturbo()
 
-def soundplay (sound_type):
+
+def soundplay(sound_type):
     if sound_type == "ping":
         playsound('F:\MTA-Memory-Test-And-Analysis-main\ping.mp3')
     elif sound_type == "correct":
@@ -71,7 +73,8 @@ def bold_mta(Time):
     print("|___________________________________________|")
     print("\n")
     soundplay("correct")
-    
+
+
 # DataBases
 
 String_lib = ["ability", "able", "about", "above", "accept", "according", "account", "across", "act", "bag", 'ball',
@@ -90,7 +93,7 @@ String_lib = ["ability", "able", "about", "above", "accept", "according", "accou
               'finally', 'financial', 'find', 'fine',
               'finish', 'finger', 'fire', 'firm', 'first', 'fish', 'five', 'floor', 'fly', 'focus', 'game', 'garden',
               'gas', 'general', 'generation',
-              'get', 'glass', 'go', 'goal', 'good','government','great','green', 'ground', 'group', 'grow',
+              'get', 'glass', 'go', 'goal', 'good', 'government', 'great', 'green', 'ground', 'group', 'grow',
               'growth''guess', 'gun',
               'guy', 'girl', 'give', 'hair', 'half', 'hand', 'hang', 'happen', 'happy', 'hard', 'have', 'he', 'head',
               'health', 'hear', 'heart',
@@ -104,16 +107,24 @@ String_lib = ["ability", "able", "about", "above", "accept", "according", "accou
               'individual', 'industry', 'information', 'inside', 'instead', 'institution', 'interest', 'interesting',
               'international', 'interview',
               'into', 'introduce', 'introduction', 'investment', 'involve', 'issue', 'it', 'item', 'its', 'itself',
-              'job','join','just','keep','key','kid','kill','kind','kitchen','know','knowledge','land','language','large',
-              'last','late','later','laugh','law','lawyer','lay','lead','leader','learn','least','leave','left','leg',
-              'legal','less','let','letter','level','lie','life','light','like','likely','line','list','listen','little',
-              'live','local','long','look','lose','loss','lot','love','machine','magazine','main','maintain','major',
-              'majority','make','man','manage','management','manager','many','market','marriage','material','matter','may',
-              'maybe','me','mean','measure','media','mention','message','method',
-              'middle','might','military','million','mind','minute','miss','mission','model','modern','moment','money','month',
-              'more','morning','most','mother','name','nation','national','natural','nature','near','nearly','necessary','need',
-              'network','never','new','news','newspaper','next','nice','night','no','none','nor','north','not','note',
-              'nothing','notice','now',
+              'job', 'join', 'just', 'keep', 'key', 'kid', 'kill', 'kind', 'kitchen', 'know', 'knowledge', 'land',
+              'language', 'large',
+              'last', 'late', 'later', 'laugh', 'law', 'lawyer', 'lay', 'lead', 'leader', 'learn', 'least', 'leave',
+              'left', 'leg',
+              'legal', 'less', 'let', 'letter', 'level', 'lie', 'life', 'light', 'like', 'likely', 'line', 'list',
+              'listen', 'little',
+              'live', 'local', 'long', 'look', 'lose', 'loss', 'lot', 'love', 'machine', 'magazine', 'main', 'maintain',
+              'major',
+              'majority', 'make', 'man', 'manage', 'management', 'manager', 'many', 'market', 'marriage', 'material',
+              'matter', 'may',
+              'maybe', 'me', 'mean', 'measure', 'media', 'mention', 'message', 'method',
+              'middle', 'might', 'military', 'million', 'mind', 'minute', 'miss', 'mission', 'model', 'modern',
+              'moment', 'money', 'month',
+              'more', 'morning', 'most', 'mother', 'name', 'nation', 'national', 'natural', 'nature', 'near', 'nearly',
+              'necessary', 'need',
+              'network', 'never', 'new', 'news', 'newspaper', 'next', 'nice', 'night', 'no', 'none', 'nor', 'north',
+              'not', 'note',
+              'nothing', 'notice', 'now',
               ]
 
 Character_lib = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z",
@@ -174,7 +185,7 @@ def met_string(string_count, type):
         print("The word list was: " + str(mem_list))
         print(("Your words were:  " + str(input_words_list)))
         print("Your accuracy is " + str(accuracy_percentage) + "%")
-        
+
         if accuracy_percentage >= 80:
             soundplay("correct")
         elif accuracy_percentage >= 60:
@@ -263,8 +274,8 @@ def met_character(character_count):
         elif accuracy_percentage >= 60:
             soundplay("ping")
         else:
-            soundplay(wrong)
-               
+            soundplay('wrong')
+
         accuracy_percentage_num = accuracy_percentage
         accuracy_percentage = str(accuracy_percentage)
         print("The original code was:" + mem_chr)
@@ -358,11 +369,11 @@ def pi_test():
         print("Your accuracy is:" + str(accuracy_percentage) + "%")
 
         if accuracy_percentage >= 80:
-            soundplay(correct)
+            soundplay('correct')
         elif accuracy_percentage >= 60:
-            soundplay(ping)
+            soundplay('ping')
         else:
-            soundplay(wrong)
+            soundplay('wrong')
 
         # x-coordinates of left sides of bars
         left = [1, 2]
