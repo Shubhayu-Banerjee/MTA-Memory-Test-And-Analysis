@@ -25,7 +25,7 @@ ynturbo()
 
 def soundplay (sound_type):
     if sound_type == "ping":
-        playsound('F:\MTA-Memory-Test-And-Analysis-main\Normal_Ping.mp3')
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\ping.mp3')
     elif sound_type == "correct":
         playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
     elif sound_type == "wrong":
