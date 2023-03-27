@@ -25,13 +25,13 @@ ynturbo()
 
 def soundplay (sound_type):
     if sound_type == "ping":
-        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\Normal_Ping.mp3')
     elif sound_type == "correct":
         playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
     elif sound_type == "wrong":
-        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
-    else:
-        playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\wrong_buzz.mp3')
+    elif sound_type == "click":
+        playsound('F:\MTA-Memory-Test-And-Analysis-main\click.mp3')
 
 
 if turbo == False:
@@ -127,6 +127,7 @@ def met_string(string_count, type):
     db_len = len(String_lib) - 1
     print("Database length:" + str(len(String_lib)))
     time_wait_str = int(input("How long do you want to remember?  (Seconds)>>>"))
+
     n = 0
     mem_list = []
     if type.lower() == "line":
@@ -171,6 +172,13 @@ def met_string(string_count, type):
         print("The word list was: " + str(mem_list))
         print(("Your words were:  " + str(input_words_list)))
         print("Your accuracy is " + str(accuracy_percentage) + "%")
+        
+        if accuracy_percentage >= 80:
+            soundplay("correct")
+        elif accuracy_percentage >= 60:
+            soundplay("ping")
+        else:
+            soundplay("wrong")
 
         # x-coordinates of left sides of bars
         left = [1, 2]
@@ -245,6 +253,13 @@ def met_character(character_count):
         # Chr/sec Test
         speed = round((correct_letters * (1 / code_wait_time)), 2)
 
+        if accuracy_percentage >= 80:
+            soundplay("correct")
+        elif accuracy_percentage >= 60:
+            soundplay("ping")
+        else:
+            soundplay(wrong)
+               
         accuracy_percentage_num = accuracy_percentage
         accuracy_percentage = str(accuracy_percentage)
         print("The original code was:" + mem_chr)
@@ -334,6 +349,13 @@ def pi_test():
 
         accuracy_percentage = round(((correct_num / length) * 100), 3)
         print("Your accuracy is:" + str(accuracy_percentage) + "%")
+
+        if accuracy_percentage >= 80:
+            soundplay(correct)
+        elif accuracy_percentage >= 60:
+            soundplay(ping)
+        else:
+            soundplay(wrong)
 
         # x-coordinates of left sides of bars
         left = [1, 2]
