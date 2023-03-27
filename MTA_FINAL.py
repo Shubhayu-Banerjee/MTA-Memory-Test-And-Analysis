@@ -39,6 +39,7 @@ if turbo == False:
     print("-------Debug-------")
     print("---Turbo:Enabled---")
 else:
+    soundplay("ping")
     print("-------Debug--------")
     print("---Turbo:Disabled---")
 
@@ -69,8 +70,8 @@ def bold_mta(Time):
     time.sleep(Time)
     print("|___________________________________________|")
     print("\n")
-
-
+    soundplay("correct")
+    
 # DataBases
 
 String_lib = ["ability", "able", "about", "above", "accept", "according", "account", "across", "act", "bag", 'ball',
@@ -127,7 +128,7 @@ def met_string(string_count, type):
     db_len = len(String_lib) - 1
     print("Database length:" + str(len(String_lib)))
     time_wait_str = int(input("How long do you want to remember?  (Seconds)>>>"))
-
+    soundplay("ping")
     n = 0
     mem_list = []
     if type.lower() == "line":
@@ -142,6 +143,7 @@ def met_string(string_count, type):
 
     elif type.lower() == "list":
         print("Remember the following words:")
+        soundplay("ping")
         while n < string_count:
             string = String_lib[random.randint(0, db_len)]
             print(string)
@@ -207,6 +209,7 @@ def met_string(string_count, type):
         plt.title('Accuracy Comparison')
 
         # function to show the plot
+        soundplay("ping")
         plt.show()
 
     acc_time_test_str()
@@ -225,8 +228,10 @@ def met_character(character_count):
 
         n += 1
     code_wait_time = int(input("How much time do you want to remember?(Seconds)>>>"))
+    soundplay("ping")
     print("\n")
     print("Remember the following code:")
+    soundplay("ping")
     mem_chr = str(mem_chr)
     print(mem_chr)
 
@@ -294,6 +299,7 @@ def met_character(character_count):
         plt.title('Accuracy Comparison')
 
         # function to show the plot
+        soundplay("ping")
         plt.show()
 
     acc_time_test_chr()
@@ -328,6 +334,7 @@ def pi_test():
             Round += 1
             clsscr(2, few_lines, turbo=True)
         else:
+            soundplay("click")
             print("You are wrong, your sequence of digits is:" + input_digits)
             print("The correct sequence was:" + shown_digits)
             print("You Lost on round :", Round)
