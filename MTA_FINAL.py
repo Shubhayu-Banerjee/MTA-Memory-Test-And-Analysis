@@ -3,6 +3,7 @@
 
 import random
 import matplotlib.pyplot as plt
+from playsound import playsound
 import time
 
 page = 100
@@ -328,6 +329,9 @@ def pi_test():
 
         progressive_percentage = 100
         progressive_percentage = progressive_percentage - (Round * (digit_increment * 3) + num_of_digits)
+
+        if progressive_percentage < 0:
+            progressive_percentage = 3
 
         # heights of bars
         height = [progressive_percentage, accuracy_percentage]
