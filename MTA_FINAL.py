@@ -432,19 +432,23 @@ def Main_Program():
         time.sleep(2.2)
     choice = input(
         "Do you want to test your remembrance speed for words (W), alphanumeric codes?(C), or pi test? (P)>>>")
-
+    playsound('click')
     if choice.lower() == "w":
         num_str = int(input("How many words do you want?"))
+        playsound('click')
         str_type = (input("Welcome, In what format do you want your lines to remember? (List/Line)"))
+        playsound('click')
         met_string(num_str, str_type)
 
 
     elif choice.lower() == "c":
         num_chr = int(input("How many characters do you want?"))
+        playsound('click')
         met_character(num_chr)
 
     elif choice.lower() == "p":
         print("Starting game")
+        playsound('click')
         time.sleep(5)
         pi_test()
 
@@ -455,6 +459,7 @@ Main_Program()
 
 while rep == True:
     rep_inp = input("Do you want to repeat (Y/N)")
+    playsound('click')
     if rep_inp.lower() == "y":
         Main_Program()
     else:
@@ -462,18 +467,24 @@ while rep == True:
         print("\n")
         time.sleep(0.5)
         print("Here are a few links for a few helpful techniques to remember in a more efficient manner.")
+        playsound('click')
         print("\n")
         print("1. https://learningcenter.unc.edu/tips-and-tools/enhancing-your-memory/")
+
         time.sleep(0.5)
         print("2. https://www.magneticmemorymethod.com/how-to-remember-things/")
+
         time.sleep(0.5)
         print("3. https://zapier.com/blog/better-memory/")
+
         time.sleep(0.5)
         print("\n")
         print("For official documentation visit: https://atl-1.gitbook.io/mta")
+        playsound('ping')
         time.sleep(0.5)
         print("Thank for using MTA - Have a nice day!")
         bold_mta(0.5)
+        playsound('correct')
         print("\n")
         print("Offloading Program")
         time.sleep(random.randint(2, 5))
