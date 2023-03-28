@@ -1,10 +1,12 @@
 # MTA Program
 # Shubhayu X Vignan + Saalim
 
+
 import random
 import matplotlib.pyplot as plt
 from playsound import playsound
 import time
+
 
 page = 100
 few_lines = 5
@@ -76,6 +78,7 @@ def bold_mta(Time):
 
 # DataBases
 
+
 String_lib = ["ability", "able", "about", "above", "accept", "according", "account", "across", "act", "bag", 'ball',
               'bank', 'bar', 'base',
               'be', 'beat', 'beautiful', 'because', 'become', 'bed', 'before', 'begin', 'behavior', 'camera',
@@ -129,6 +132,7 @@ String_lib = ["ability", "able", "about", "above", "accept", "according", "accou
 Character_lib = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z",
                  "x", "c", "v", "b", "n", "m",
                  "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@"]
+
 
 pi = "3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925"
 
