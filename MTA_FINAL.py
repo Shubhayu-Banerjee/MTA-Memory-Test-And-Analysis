@@ -32,7 +32,7 @@ def soundplay(sound_type):
         playsound('F:\MTA-Memory-Test-And-Analysis-main\Correct_Ping.mp3')
     elif sound_type == "wrong":
         playsound('F:\MTA-Memory-Test-And-Analysis-main\wrong_buzz.mp3')
-    elif sound_type == "click":
+    else:
         playsound('F:\MTA-Memory-Test-And-Analysis-main\click.mp3')
 
 
@@ -408,6 +408,7 @@ def pi_test():
         plt.title('Accuracy Comparison')
 
         # function to show the plot
+        soundplay('ping')
         plt.show()
 
     accuracy_pi()
@@ -432,23 +433,23 @@ def Main_Program():
         time.sleep(2.2)
     choice = input(
         "Do you want to test your remembrance speed for words (W), alphanumeric codes?(C), or pi test? (P)>>>")
-    playsound('click')
+    soundplay('click')
     if choice.lower() == "w":
         num_str = int(input("How many words do you want?"))
-        playsound('click')
+        soundplay('click')
         str_type = (input("Welcome, In what format do you want your lines to remember? (List/Line)"))
-        playsound('click')
+        soundplay('click')
         met_string(num_str, str_type)
 
 
     elif choice.lower() == "c":
         num_chr = int(input("How many characters do you want?"))
-        playsound('click')
+        soundplay('click')
         met_character(num_chr)
 
     elif choice.lower() == "p":
         print("Starting game")
-        playsound('click')
+        soundplay('click')
         time.sleep(5)
         pi_test()
 
@@ -459,7 +460,7 @@ Main_Program()
 
 while rep == True:
     rep_inp = input("Do you want to repeat (Y/N)")
-    playsound('click')
+    soundplay('click')
     if rep_inp.lower() == "y":
         Main_Program()
     else:
@@ -467,7 +468,7 @@ while rep == True:
         print("\n")
         time.sleep(0.5)
         print("Here are a few links for a few helpful techniques to remember in a more efficient manner.")
-        playsound('click')
+        soundplay('click')
         print("\n")
         print("1. https://learningcenter.unc.edu/tips-and-tools/enhancing-your-memory/")
 
@@ -480,11 +481,14 @@ while rep == True:
         time.sleep(0.5)
         print("\n")
         print("For official documentation visit: https://atl-1.gitbook.io/mta")
-        playsound('ping')
+        print('\n')
+        time.sleep(0.5)
+        print("To visits out GitHub Repository visit: https://github.com/Shubhayu-Banerjee/MTA-Memory-Test-And-Analysis")
+        soundplay('ping')
         time.sleep(0.5)
         print("Thank for using MTA - Have a nice day!")
         bold_mta(0.5)
-        playsound('correct')
+        soundplay('correct')
         print("\n")
         print("Offloading Program")
         time.sleep(random.randint(2, 5))
