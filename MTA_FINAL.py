@@ -27,13 +27,13 @@ ynturbo()
 
 def soundplay(sound_type):
     if sound_type == "ping":
-        playsound('./ping.mp3')
+        playsound('sounds/ping.mp3')
     elif sound_type == "correct":
-        playsound('./Correct_Ping.mp3')
+        playsound('sounds/cping.mp3')
     elif sound_type == "wrong":
-        playsound('./wrong_buzz.mp3')
+        playsound('sounds/wrong_buzz.mp3')
     else:
-        playsound('./click.mp3')
+        playsound('sounds/click.mp3')
 
 if turbo == False:
     soundplay("ping")
